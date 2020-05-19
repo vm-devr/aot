@@ -1,99 +1,82 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-	<style>
-		h3 {
-			font-family: "Fira Sans", sans-serif;
-			font-style: normal;
-			font-weight: 800;
-			color: #1d1d1d;
-			font-size: 20px;
-			line-height: 22px;
-			text-align: center;
-		}
-		
-		div.dh3 {
-			font-family: "Fira Sans", sans-serif;
-			font-style: normal;
-			font-weight: 400;
-			color: #1d1d1d;
-			font-size: 14px;
-			line-height: 19px;
-			text-align: center;
-		}
-		
-		div.dh2 {
-			font-family: "Fira Sans", sans-serif;
-			font-style: normal;
-			font-weight: 400;
-			color: #1d1d1d;
-			font-size: 10px;
-			line-height: 19px;
-			text-align: center;
-		}		
-
-		a {
-			color: #6495ED;
-			text-decoration: none;
-		   }
-		   
-		a:hover {  
-			text-decoration: underline;
-		   }
-		   
-		div {
-			border-radius: 5px;
-			padding: 5px;
-		}	
-		
-		div.footer{ 
-			position: fixed;     
-			text-align: center;    
-			bottom: 0px; 
-			width: 100%;
-		}  		
-		
-		body {
-			background:#EFFBEF;
-		}			
-	</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Always On Top</title>
   </head>
-
-<body>
-  <h3>Always on Top application</h3>
-	
-  <div class=dh3>
-  You have to download native Always On Top application before using browser extension (new extensions policy),<br />
-  please download the file from  <a href="https://github.com/vm-devr/aot/releases/download/5.0/AOT.exe"> github repository</a> and run <i>AOT.exe</i> to install the app<br />
-  <b>After the installation do not remove or move AOT.exe or aot_manifest.json it has created!!</b><br /><br />
-  <b>You don't need to worry about the application:</b>
-  <ol>
-	  <li>You might check it with whatever antivirus you have</li>
-	  <li>Even the size of the file is so small you can't possibly put anything bad inside</li>
-	  <li>And finally, you can build the app from scratch using its <A href='https://github.com/vm-devr/aot/blob/master/src.cpp'>source code</A></li>
-  </ol>
-  </div>
-	
-
-  <br /><br /><br /><br />
-  <h3>Always on Top extension</h3>
-  <div class=dh3>
-   <a href="https://addons.mozilla.org/en-US/firefox/addon/always-on-top/">Firefox</a><br />
-  </div>	
-	
-  <div class=dh2>
-	  <br/>
-  If you want to set Always on Top style for ANY window in your system, <a href="mailto:vm.devr@gmail.com?Subject=Global%20hotkey">contact me</a>
-  </div>
-	
-  <div class="footer">
-    <h4>I aim to bring way more information and features to you and your donations are going to help me get there<br/>
-	    Please <a href="mailto:vm.devr@gmail.com?Subject=Global%20hotkey">contact me</a> if you want to donate in any way</h4>
-  </div>
-  
- 
-</body>
-
+  <body>
+    <div class="inner-container">
+      <div class="section-container">
+        <section class="section left-section">
+          <div class="app">
+            <div class="helper"></div>
+            <h1>Always on Top application</h1>
+            <p>
+              It is not possible to use Always On Top extension without native
+              application because of new extensions policy. Please download
+              Always On Top application from<br />
+              <a
+                href="https://github.com/vm-devr/aot/releases/download/5.0/AOT.exe"
+              >
+                github repository</a
+              ><br />
+              and run <i>AOT.exe</i> to install the app
+              <br />
+              <b
+                >After the installation do not remove or move AOT.exe or
+                aot_manifest.json it has created!!</b
+              >
+            </p>
+          </div>
+          <div class="info">
+            <p>
+              <b>You shouldn't worry about the application:</b><br /><br />
+              You might check it with whatever antivirus you have<br />Even the
+              size of the file is so small you can't possibly put anything bad
+              inside<br />And finally, you can build the app from scratch using
+              its
+              <a href="https://github.com/vm-devr/aot/blob/master/src.cpp"
+                >source code</a
+              >
+            </p>
+          </div>
+        </section>
+        <section class="section right-section">
+          <div class="extension">
+            <h1>Always on Top extension</h1>
+            <p>
+              <a
+                href="https://addons.mozilla.org/en-US/firefox/addon/always-on-top/"
+                >Firefox</a
+              ><br /><br /><br />
+              If you want to set Always on Top style for ANY window in your
+              system,
+              <a href="mailto:vm.devr@gmail.com?Subject=Global%20hotkey"
+                >contact me</a
+              >
+            </p>
+          </div>
+          <div class="pin"></div>
+        </section>
+        <div class="footer-section">
+          <p>
+            <b
+              >I aim to bring way more information and features to you and your
+              donations are going to help me get there<br />Please
+              <a href="mailto:vm.devr@gmail.com?Subject=Global%20hotkey"
+                >contact me</a
+              >
+              if you want to donate in any way</b
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
