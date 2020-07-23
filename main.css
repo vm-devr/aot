@@ -4,161 +4,172 @@
   font-family: "Fira Sans", sans-serif;
 }
 
-.diff-browser-container {
+h1 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 15px;
+  line-height: 19px;
+}
+
+a {
+  color: #1b61e4;
+  text-decoration: none;
+}
+
+/* Notice container */
+.chrome-container,
+.edge-container {
+  grid-area: alert-section;
+  padding: 0.5rem 0;
+  background-color: #ff794d;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+
+/* Icon */
+.fas {
+  margin-left: 3rem;
+}
+
+/* Paragraph in the notice */
+.notice-p {
+  margin: auto;
+}
+
+/* Styles for Edge */
+@supports (-ms-ime-align: auto) {
+  .chrome-container {
+    display: none;
+  }
+}
+
+/* Styles for Chrome */
+.edge-container:not(*:root) {
+  display: none;
+}
+
+/* Styles for Firefox */
+@supports (-moz-appearance: none) {
+  .chrome-container {
+    display: none;
+  }
+  .edge-container {
+    display: none;
+  }
+}
+
+.inner-container {
   /* Photo by Martin Adams on Unsplash */
   background: url(back_photo.jpg) no-repeat center center/cover;
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.center-section {
+.section-container {
+  display: grid;
+  align-content: space-evenly;
+  grid-template-areas:
+    "alert-section alert-section"
+    "left-section right-section"
+    "footer-section footer-section";
+  width: 70%;
+}
+
+/* Application & Extension general style */
+section {
   text-align: center;
-  color: #595959;
+  margin: 0.5rem 2rem;
+  border-radius: 5px;
 }
 
-.inner-container {
-  display: none;
+/* Application & Extension Container */
+.left-section,
+.right-section {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  height: 30rem;
 }
 
-/* Styles for Firefox */
-@supports (-moz-appearance: none) {
-  .diff-browser-container {
-    display: none;
-  }
+.left-section {
+  background-color: #fff;
+  grid-area: left-section;
+}
 
-  h1 {
-    text-transform: uppercase;
-    padding-bottom: 1rem;
-    font-weight: 700;
-    line-height: 1.5;
-  }
+.right-section {
+  /* Photo by Jess Bailey on Unsplash */
+  background: url(pin.jpg) no-repeat center center/cover;
+  grid-area: right-section;
+  border-radius: 5px;
+}
 
-  p {
-    font-size: 15px;
-    line-height: 19px;
-  }
+.left-section > .app {
+  padding: 1rem;
+  color: #000;
+  position: relative;
+  transition: all 1s;
+  z-index: 5;
+}
 
-  a {
-    color: #1b61e4;
-    text-decoration: none;
-  }
+/* Gradient container */
+.left-section > .app > .helper {
+  background-image: linear-gradient(
+    -125deg,
+    #5271c4 0%,
+    #b19fff 48%,
+    #eca1fe 100%
+  );
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: all 1s;
+  border-radius: 5px 5px 0 0;
+}
 
-  .left-section {
-    grid-area: left-section;
-  }
-  .right-section {
-    grid-area: right-section;
-  }
-  .footer-section {
-    grid-area: footer-section;
-  }
+.left-section > .info {
+  background: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  border-radius: 0 0 5px 5px;
+}
 
-  .inner-container {
-    /* Photo by Martin Adams on Unsplash */
-    background: url(back_photo.jpg) no-repeat center center/cover;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-  }
+/* Extension */
+.right-section > .extension {
+  padding: 1rem;
+  color: #a202ca;
+  transition: all 1s;
+}
 
-  .section-container {
-    display: grid;
-    align-content: space-evenly;
-    grid-template-areas:
-      "left-section right-section"
-      "footer-section footer-section";
-    width: 70%;
-  }
+/* Styles to change gradient background on white one when hover */
+.left-section:hover > .app > .helper {
+  opacity: 0;
+}
 
-  /* Application & Extension general style */
-  section {
-    text-align: center;
-    margin: 3rem 2rem;
-    border-radius: 5px;
-  }
+/* Styles to change font color when hover */
+.right-section:hover > .extension {
+  background-color: inherit;
+  color: #000;
+}
 
-  /* Application & Extension Container */
-  .left-section,
-  .right-section {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    height: 30rem;
-  }
-
-  .left-section {
-    background-color: #fff;
-  }
-
-  .right-section {
-    /* Photo by Jess Bailey on Unsplash */
-    background: url(pin.jpg) no-repeat center center/cover;
-  }
-
-  .left-section > .app {
-    padding: 1rem;
-    color: #000;
-    position: relative;
-    transition: all 1s;
-    z-index: 5;
-  }
-
-  .left-section > .app > .helper {
-    background-image: linear-gradient(
-      -125deg,
-      #5271c4 0%,
-      #b19fff 48%,
-      #eca1fe 100%
-    );
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    transition: all 1s;
-    border-radius: 5px 5px 0 0;
-  }
-
-  .left-section > .info {
-    background: #fff;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000;
-    border-radius: 0 0 5px 5px;
-  }
-
-  .left-section:hover > .app > .helper {
-    opacity: 0;
-  }
-
-  .right-section:hover > .extension {
-    background-color: inherit;
-    color: #000;
-  }
-
-  /* Extension */
-  .right-section > .extension {
-    padding: 1rem;
-    color: #a202ca;
-    border-radius: 5px 5px 0 0;
-    transition: all 1s;
-  }
-
-  .right-section > .pin {
-    border-radius: 0 0 5px 5px;
-  }
-
-  /* Footer */
-  .footer-section {
-    text-align: center;
-  }
+/* Footer */
+.footer-section {
+  text-align: center;
+  grid-area: footer-section;
 }

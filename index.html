@@ -8,27 +8,37 @@
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <link href=".\fontawesome\css\all.css" rel="stylesheet" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <title>Always On Top</title>
   </head>
   <body>
-    <div class="diff-browser-container">
-      <section class="center-section">
-        <h2>
-          Always On Top extension is available on Desktop Firefox only<br />Sorry
-          for inconveniences
-        </h2>
-      </section>
-    </div>
     <div class="inner-container">
       <div class="section-container">
+        <section class="chrome-container">
+          <i class="fas fa-exclamation-triangle fa-2x"></i>
+          <p class="notice-p"><b>
+            Always On Top extension is available on Desktop Firefox  and Edge. Sorry
+            for inconveniences
+          </b>
+          </p>
+        </section>
+
+        <section class="edge-container">
+          <i class="fas fa-exclamation-triangle fa-2x"></i>
+          <p class="notice-p"><b>
+            Always On Top extension will become available on Edge in the coming weeks. Please check back later
+            </b>
+          </p>
+        </section>
+
         <section class="section left-section">
           <div class="app">
+            <!-- Helper container to get rid of gradient when hover -->
             <div class="helper"></div>
             <h1>Always on Top application</h1>
             <p>
-              It is not possible to use Always On Top extension without native
-              application because of new extensions policy. Please download
+              It is not possible to use Always On Top extension without native application as the feature isn't present in web extensions API. Please download
               Always On Top application from<br />
               <a
                 href="https://github.com/vm-devr/aot/releases/download/inst_admin/aot.exe"
@@ -63,7 +73,8 @@
               <a
                 href="https://addons.mozilla.org/en-US/firefox/addon/always-on-top/"
                 >Firefox</a
-              ><br /><br /><br />
+              ><br />
+              <p style="color: #1b61e4">Edge</p><br /><br /> 
               If you want to set Always on Top style for ANY window in your
               system,
               <a href="mailto:vm.devr@gmail.com?Subject=Global%20hotkey"
@@ -71,7 +82,6 @@
               >
             </p>
           </div>
-          <div class="pin"></div>
         </section>
         <div class="footer-section">
           <p>
