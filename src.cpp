@@ -1,4 +1,3 @@
-
 bool Install()
 {
 	bool bResult = false;
